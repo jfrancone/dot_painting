@@ -1,5 +1,5 @@
 from turtle import Turtle, Screen
-from colorpalette import palette, fall_palette, fall_palette_2
+from colorpalette import palette, fall_palette, fall_palette_2, grand_canyon
 import random
 
 turns = [90, 180, 270, 360]
@@ -55,15 +55,12 @@ def hirst_dots(dot_number, c_palette, rows):
             tina.forward(50)
             tina.right(90)
             tina.down()
-        if left_tina:
-            left_tina = False
-        else:
-            left_tina = True
+        left_tina = not left_tina
     
 
 position_turtle()
 #dot_row(10, palette)
-hirst_dots(10, palette, 10)
+hirst_dots(10, grand_canyon, 10)
 new_position = tina.position()
 print(new_position)
 
